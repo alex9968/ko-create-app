@@ -49,9 +49,6 @@ const pluginsUnique = (uniques) => {
  * @Author: Charles
  * @Date: 2018-12-26 11:24:53
  */
-const ENV_PROD = "production";
-const ENV_DEV = "development";
-
 module.exports = function getWebpackBase(program) {
   const result=getEntry(program);
 const tsRule=[
@@ -79,7 +76,7 @@ const tsRule=[
   
 
   const webpackConfig = {
-    mode: process.env.NODE_ENV === ENV_DEV ? ENV_DEV : ENV_PROD,
+    mode: process.env.NODE_ENV,
     context: paths.appDirectory,
     entry:result.entry,
     output: Object.assign(

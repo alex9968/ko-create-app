@@ -4,8 +4,8 @@
  * @Company: 袋鼠云
  * @Author: Charles
  * @Date: 2018-12-24 15:51:59
- * @LastEditors: Charles
- * @LastEditTime: 2020-03-03 18:36:46
+ * @LastEditors  : Charles
+ * @LastEditTime : 2020-01-10 16:23:56
  */
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -106,7 +106,7 @@ module.exports = () => {
         },
         {
             test: /\.jsx|.js?$/,
-            //exclude: /node_modules/,
+            exclude: /node_modules/,
             loader: HAPPY_PACK,
             options: {
                 id: "happy-babel-js"
